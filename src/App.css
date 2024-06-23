@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  background-color: #ffcc00;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.header .logo img {
+  height: 50px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffcc00;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-item {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navbar .nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ff6600;
+  background-color: #fff2cc;
+  border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.navbar .nav-item .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.navbar .nav-item .dropdown a {
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar .nav-item .dropdown a:hover {
+  background-color: #ffcc00;
+  color: #fff;
+}
+
+.navbar .nav-item:hover .dropdown {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar .nav-item {
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar .nav-link {
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar .nav-item .dropdown {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .navbar .nav-item .dropdown a {
+    padding-left: 30px;
+  }
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero .carousel .slide img {
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+.hero .carousel .legend {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+/* Pooja Section */
+.pooja {
+  padding: 20px;
+  text-align: center;
+}
+
+.pooja h2 {
+  margin-bottom: 10px;
+}
+
+.pooja p {
+  margin-bottom: 20px;
+}
+
+.pooja-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.pooja-cards .card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 30%;
+  margin: 10px;
+}
+
+.pooja-cards .card img {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.pooja-cards .card h3 {
+  margin: 10px 0;
+}
+
+.pooja-cards .card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
